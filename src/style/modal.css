@@ -1,0 +1,102 @@
+/* Modal.css */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #888;
+  flex: 1;
+  background-color: #000;
+  display: flex;
+  flex-direction: column ;
+}
+
+.close {
+  color: #fefefe;
+  float: right;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.close:hover,
+.close:focus {
+  color: rgba(21, 97, 226, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.modal-info .modal-description{
+  color:rgba(21, 97, 226, 1);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: 3px;
+}
+
+.modal-info .modal-login{
+  display: flex;
+  color: rgba(21, 97, 226, 1);
+  font-size: 1.4rem;
+  align-items: center;
+}
+
+.modal-info .modal-icon{
+  border: 2px solid rgba(21, 97, 226, 1);
+  border-radius: 25%;
+  padding: 10px 10px;
+}
+
+.modal-icon:hover{
+  color: #fefefe;
+  background-color: rgba(21, 97, 226, 1);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.modal.fade-in {
+  animation: fadeIn 400ms forwards;
+}
+
+.modal.fade-out {
+  animation: fadeOut 300ms forwards;
+}
